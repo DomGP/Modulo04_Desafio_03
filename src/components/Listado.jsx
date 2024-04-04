@@ -1,22 +1,36 @@
 import Table from 'react-bootstrap/Table';
 
-const Listado = () => {
+const Listado = ({datos}) => {
     return (
         <>
-            <Table striped bordered hover>
+            <Table 
+                striped 
+                bordered 
+                hover
+                className='listadoStyle'
+                >
                 <thead>
                     <tr>
-                    <th>#</th>
-                    <th>{}</th>
+                    <th>id</th>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Edad</th>
+                    <th>Cargo</th>
+                    <th>Teléfono</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                    <td>{}</td>
-                    <td>{}</td>
-                    <td>{}</td>
-                    <td>{}</td>
-                    </tr>
+                    {datos.map(dato => (
+                        <tr key = {dato.id}>
+                            <td>{dato.id}</td>
+                            <td>{dato.nombre}</td>
+                            <td>{dato.correo}</td>
+                            <td>{dato.edad}</td>
+                            <td>{dato.cargo}</td>
+                            <td>{dato.telefono}</td>
+                        </tr>
+                    ))}
+                    
                 </tbody>
             </Table>
         </>

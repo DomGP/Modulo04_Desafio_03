@@ -1,7 +1,33 @@
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
   min-height: 100vh;
+  padding: 3em;
+  background-image: linear-gradient(rgb(151, 151, 244),lavender );
 }
+.formStyle{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3em;
+  width: 100%;
+  
+}
+/* .inputShort{
+  
+} */
+.buttonStyle{
+  width: 100%;
+  max-width: 200px;
+  margin-top: 1em;
+}
+
+
+@media(min-width:992px){
+  .flex{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 2em;
+  }
+}
+
+
