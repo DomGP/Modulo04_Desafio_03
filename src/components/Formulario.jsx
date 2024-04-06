@@ -51,54 +51,37 @@ const Formulario = ({onAgregar}) => {
                 <Form.Group 
                     className="mb-3">
                     <Form.Control 
-                        className="inputShort" 
+                        className="inputShort mb-3" 
                         type="name" 
                         placeholder="Nombre del colaborador"
                         value={nombre} 
                         onChange={(e) => setNombre(e.target.value)}/>
-                </Form.Group>
-
-                <Form.Group 
-                    className="mb-3">
-                    <Form.Control 
-                        className="inputShort"  
+                        <Form.Control 
+                        className="inputShort mb-3"  
                         type="email" 
                         placeholder="Email del colaborador" 
                         value={correo}
                         onChange={(e) => setCorreo(e.target.value)}/>
-                </Form.Group>
-
-                <Form.Group 
-                    className="mb-3">
-                    <Form.Control 
-                        className="inputShort" 
+                        <Form.Control 
+                        className="inputShort mb-3" 
                         type="number" 
                         placeholder="Edad del colaborador" 
                         value={edad}
                         onChange={(e) => setEdad(e.target.value)}/>
-                </Form.Group>
-
-                <Form.Group 
-                    className="mb-3">
-                    <Form.Control 
-                        className="inputShort" 
+                        <Form.Control 
+                        className="inputShort mb-3" 
                         type="text" 
                         placeholder="Cargo del colaborador"
                         value={cargo} 
                         onChange={(e) => setCargo(e.target.value)}/>
-                </Form.Group>
-
-                <Form.Group 
-                    className="mb-3">
-                    <Form.Control 
-                        className="inputShort" 
+                        <Form.Control 
+                        className="inputShort mb-3" 
                         type="number" 
                         placeholder="Teléfono del colaborador" 
                         value={telefono}
                         onChange={(e) => setTelefono(e.target.value)}/>
                 </Form.Group>
 
-                
                 <Button 
                     className='buttonStyle' 
                     type="submit">
