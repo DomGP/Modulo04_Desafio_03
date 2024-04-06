@@ -21,6 +21,10 @@ body {
   margin-top: 1em;
 }
 
+.buscadorStyle{
+  width: 30%;
+}
+
 
 @media(min-width:992px){
   .flex{

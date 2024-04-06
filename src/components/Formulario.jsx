@@ -1,9 +1,11 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import Alerta from './Alerta';
 
 import {useState} from 'react'
 
-const Formulario = ({onAgregar}) => {
+
+const Formulario = ({onAgregar, setMensaje,messageAlert}) => {
 
     //ESTADOS DEL FORMULARIO
     const [nombre, setNombre] = useState('')
@@ -12,6 +14,10 @@ const Formulario = ({onAgregar}) => {
     const [cargo, setCargo] = useState('')
     const [telefono, setTelefono] = useState('')
 
+    const [errorVacio, setErrorVacio] = useState(false)
+    const [errorEmail, setErrorEmail] = useState(false)
+    const [correcto, setCorrecto] = useState(false)
+    
     const generarIdUnico = () => {
         return Math.floor(Math.random() * 100);
     }
@@ -26,7 +32,15 @@ const Formulario = ({onAgregar}) => {
             cargo,
             telefono
         };
+        const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if(nombre === '' || correo === '' || edad === '' || cargo === '' || telefono === ''){
+            setErrorVacio(true)
+            setMensaje('Todos los campos son obligatorios')
+            return
+        }
         onAgregar(nuevoColaborador)
+        setCorrecto(true)
+        setMensaje('El registro ha sido exitoso')
         // Limpiar los campos después de agregar el colaborador
         setNombre('');
         setCorreo('');
@@ -87,6 +101,12 @@ const Formulario = ({onAgregar}) => {
                     type="submit">
                     Agregar colaborador
                 </Button>
+                {errorVacio ? <Alerta 
+                    colorAlert = 'danger'
+                    messageAlert= {messageAlert}/> : null}
+                {correcto ? <Alerta 
+                    colorAlert = 'success'
+                    messageALert = {messageAlert}/> : null}
             </Form>
         </>
     )

@@ -11,7 +11,7 @@ const Buscador = ({datos, setDatosFiltrados}) => {
     return (
         <>
             <Form.Control
-                className='mb-3'
+                className='mb-3 buscadorStyle'
                 type="text" 
                 placeholder="Ingresa un nombre" 
                 onChange={buscarColaborador}/>

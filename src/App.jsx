@@ -14,6 +14,7 @@ import Buscador from './components/Buscador';
 function App() {
   const [datos, setDatos] = useState(BaseColaboradores);
   const [datosFiltrados, setDatosFiltrados] = useState([])
+  const [mensaje, setMensaje] = useState('')
 
   const agregarColaborador = (nuevoColaborador) => {
     setDatos([...datos, nuevoColaborador])
@@ -33,7 +34,10 @@ function App() {
           <div>
             <Subtitle 
               textSubtitle = 'Agregar Colaborador'/>
-            <Formulario onAgregar = {agregarColaborador} />
+            <Formulario 
+              onAgregar = {agregarColaborador} 
+              messageAlert = {mensaje}
+              setMensaje = {setMensaje}/>
           </div>
       </div>
       
