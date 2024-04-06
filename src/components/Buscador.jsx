@@ -1,12 +1,13 @@
 import Form from 'react-bootstrap/Form';
 
-const Buscador = ({datos, setDatosFiltrados}) => {
+const Buscador = ({datos}) => {
+    
     const buscarColaborador = (e) =>{
         const filtro = e.target.value.toLowerCase();
         const datosFiltrados = datos.filter(
             (element) => element.nombre.toLowerCase().includes(filtro)
         )
-        setDatosFiltrados(datosFiltrados)
+        console.log(datosFiltrados)
     }
     return (
         <>
