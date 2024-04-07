@@ -1,9 +1,23 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 body {
   min-height: 100vh;
-  padding: 3em;
+  /* padding: 3em; */
   background-image: linear-gradient(rgb(151, 151, 244),lavender );
 }
-.formStyle{
+/* .formStyle{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,24 +25,29 @@ body {
   padding:1em;
   width: 100%;
   
-}
+} */
 /* .inputShort{
   
 } */
 .buttonStyle{
   margin-bottom: 1em;
   width: 100%;
-  max-width: 200px;
-}
+
+} 
 
 .buscadorStyle{
-  width: 25% !important;
+  width: 35% !important;
   text-align: center;
+  margin-left: 0.6em;
+} 
+h1{
+  padding-left: 0.5em;
+  padding-top: 1em;
 }
 h3{
   text-align: center;
+  padding-top: 1em;
 }
-
 .iconAlert{
   width: auto;
   height: 1.2em;
@@ -37,13 +56,13 @@ h3{
 }
 
 
-@media(min-width:992px){
+/* @media(min-width:992px){
   .flex{
     display: grid;
     grid-template-columns: 4fr 1fr;
     gap: 2em;
   }
   
-}
+} */
 
 

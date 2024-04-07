@@ -25,14 +25,20 @@ function App() {
     <>
       <Header
         textTitle = 'Lista de Colaboradores'/>
-      <div /* className="flex-container" */>
-        <Buscador 
-          datos = {datos}/>
-        <div className='flex'>
-
-          <Listado 
-            datos = {datos} />
-            <div /* className='form-container' */>
+      <Buscador 
+          datos = {datos}
+          setDatos = {setDatos}/>
+      <div className="container-fluid">
+        <div className='row'>
+          <div className='col-md-8 col-lg-9 col-xl-9'>
+            <div className='table-responsive'>
+              <Listado 
+                className = "col-md-9"
+                datos = {datos} />
+            </div>
+          </div>
+          <div className='cold-md-4 col-lg-3 col-lx-3'>
+            <div>
               <Subtitle 
                 textSubtitle = 'Agregar Colaborador'/>
               <Formulario 
@@ -40,8 +46,8 @@ function App() {
                 messageAlert = {mensaje}
                 setMensaje = {setMensaje}/>
             </div>
+            </div>
         </div>
-        
       </div>
           
     </>
