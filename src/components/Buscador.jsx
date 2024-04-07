@@ -1,4 +1,4 @@
-// Buscador.jsx
+/* // Buscador.jsx
 import { useState, useEffect } from 'react';
 import Form from 'react-bootstrap/Form';
 
@@ -36,3 +36,25 @@ const Buscador = ({ datos, setDatos }) => {
 
 export default Buscador;
 
+ */
+
+import { useState } from 'react';
+import Form from 'react-bootstrap/Form';
+
+const Buscador = ({ busqueda, setBusqueda }) => {
+    const handleBuscar = (e) => {
+        setBusqueda(e.target.value);
+    };
+
+    return (
+        <Form.Control
+            className='mb-3 buscadorStyle'
+            type="text"
+            placeholder="Ingresa un nombre"
+            value={busqueda}
+            onChange={handleBuscar}
+        />
+    );
+};
+
+export default Buscador;

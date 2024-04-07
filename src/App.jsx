@@ -16,25 +16,34 @@ function App() {
   const [datos, setDatos] = useState(BaseColaboradores);
   /* const [datosFiltrados, setDatosFiltrados] = useState([]) */
   const [mensaje, setMensaje] = useState('')
+  const [busqueda, setBusqueda] = useState('')
 
   const agregarColaborador = (nuevoColaborador) => {
     setDatos([...datos, nuevoColaborador])
   }
   
+  const buscar = (busqueda) => {
+    setBusqueda(busqueda)
+  }
+
+  const datosFiltrados = datos.filter(colaborador =>
+    colaborador.nombre.toLowerCase().includes(busqueda.toLowerCase())
+  );
+
   return (
     <>
       <Header
         textTitle = 'Lista de Colaboradores'/>
       <Buscador 
-          datos = {datos}
-          setDatos = {setDatos}/>
+          busqueda={busqueda}
+          setBusqueda = {buscar}/>
       <div className="container-fluid">
         <div className='row'>
           <div className='col-md-8 col-lg-9 col-xl-9'>
             <div className='table-responsive'>
               <Listado 
                 className = "col-md-9"
-                datos = {datos} />
+                datos = {busqueda ? datosFiltrados : datos} />
             </div>
           </div>
           <div className='cold-md-4 col-lg-3 col-lx-3'>
