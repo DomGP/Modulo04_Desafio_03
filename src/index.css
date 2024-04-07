@@ -8,7 +8,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 3em;
+  padding:1em;
   width: 100%;
   
 }
@@ -16,13 +16,24 @@ body {
   
 } */
 .buttonStyle{
+  margin-bottom: 1em;
   width: 100%;
   max-width: 200px;
-  margin-top: 1em;
 }
 
 .buscadorStyle{
-  width: 30%;
+  width: 25% !important;
+  text-align: center;
+}
+h3{
+  text-align: center;
+}
+
+.iconAlert{
+  width: auto;
+  height: 1.2em;
+  margin-bottom: 0.2em;
+  text-align: center;
 }
 
 

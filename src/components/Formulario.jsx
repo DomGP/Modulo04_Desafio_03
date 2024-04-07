@@ -5,7 +5,7 @@ import Alerta from './Alerta';
 import {useState} from 'react'
 
 
-const Formulario = ({onAgregar,messageAlert,setMensaje}) => {
+const Formulario = ({onAgregar,iconAlertaError, iconAlertaExito, messageAlert, setMensaje}) => {
 
     //ESTADOS DEL FORMULARIO
     const [nombre, setNombre] = useState('')
@@ -109,9 +109,11 @@ const Formulario = ({onAgregar,messageAlert,setMensaje}) => {
                     </Button>
                     {errorVacio ? <Alerta 
                         colorAlert = 'danger'
+                        iconAlerta = '/assets/imgs/iconError.svg'
                         messageAlert= {messageAlert}/> : null}
                     {correcto ? <Alerta 
                         colorAlert = 'success'
+                        iconAlerta = '/assets/imgs/iconCheck.svg'
                         messageAlert = {messageAlert}/> : null}
                 </Form>
             </div>

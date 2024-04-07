@@ -31,7 +31,7 @@ function App() {
         <div className='flex'>
 
           <Listado 
-            datos = {datosFiltrados.length > 0 ? datosFiltrados : datos} />
+            datos = {datos} />
             <div /* className='form-container' */>
               <Subtitle 
                 textSubtitle = 'Agregar Colaborador'/>
